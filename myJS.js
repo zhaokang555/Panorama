@@ -5,7 +5,7 @@ var scene = null;
 var camera = null;
 var renderer = null;
 var id = null;
-var stat = null;
+//var stat = null; //stat是测试时用来统计帧数的工具
 var speed = 0.005;
 //var speedSpan = document.getElementById('speed');
 
@@ -26,14 +26,8 @@ function init() {
     //speedSpan.innerText = speed.toFixed(3);
     $("#speed").text(speed.toFixed(3));
 
-    addStatsToDocument();
-
-    renderer = new THREE.WebGLRenderer({
-        canvas: document.getElementById('mainCanvas')
-    });
-    renderer.setClearColor(0x000000);
-    scene = new THREE.Scene();
-
+    //addStatsToDocument();
+    addRendererToScene();
     addCameraToScene();
     addLightToScene();
     addCubeToScene();
@@ -41,7 +35,6 @@ function init() {
     renderer.render(scene, camera);
 
     id = requestAnimationFrame(draw);
-
 }
 
 function stop() {
@@ -67,16 +60,24 @@ function speedSlower() {
 }
 
 function draw() {
-    stat.begin();
+    //stat.begin();
 
     cube.rotation.y = (cube.rotation.y + speed) % (Math.PI * 2);
     renderer.render(scene, camera);
     id = requestAnimationFrame(draw);
 
-    stat.end();
+    //stat.end();
 }
 
 // ======从init() 的代码中抽象出来的函数======
+function addRendererToScene() {
+    renderer = new THREE.WebGLRenderer({
+        canvas: document.getElementById('mainCanvas')
+    });
+    renderer.setClearColor(0x000000);
+    scene = new THREE.Scene();
+}
+
 function addStatsToDocument() {
     stat = new Stats();
     stat.domElement.style.position = 'absolute';
