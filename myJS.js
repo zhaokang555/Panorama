@@ -78,6 +78,8 @@ function addRendererToScene() {
     scene = new THREE.Scene();
 }
 
+
+// 测试时使用
 function addStatsToDocument() {
     stat = new Stats();
     stat.domElement.style.position = 'absolute';
@@ -107,6 +109,7 @@ function addLightToScene() {
 }
 
 function addCubeToScene() {
+    // 实验性代码, 并不能运行
     //var materials = [];
     //for (var i = 0; i < 6; ++i) {
     //    materials.push(new THREE.MeshBasicMaterial({
@@ -119,6 +122,7 @@ function addCubeToScene() {
     //
     //var materials = new THREE.MeshNormalMaterial();
     //materials.side = THREE.DoubleSide;
+
     var materialArray = [];
     for (var i = 0; i < 6; ++i) {
         //var texture = THREE.ImageUtils.loadTexture('testImg/' + i + '.png', {}, function() {
