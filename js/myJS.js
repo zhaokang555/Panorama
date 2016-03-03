@@ -44,7 +44,7 @@ function stop() {
     }
 }
 function begin() {
-    if (id == null)
+    if (id === null)
         id = requestAnimationFrame(draw);
 }
 function speedFaster() {

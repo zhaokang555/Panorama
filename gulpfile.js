@@ -10,7 +10,7 @@ var rename = require('gulp-rename');
 
 // 检查脚本
 gulp.task('lint', function() {
-    gulp.src('./js/*.js')
+    gulp.src('./js/myJS.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
