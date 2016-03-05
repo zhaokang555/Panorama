@@ -1,3 +1,8 @@
+
+/**
+ * File Name: gulpfile.js
+ */
+
 // 引入 gulp
 var gulp = require('gulp'); 
 
@@ -26,10 +31,10 @@ gulp.task('lint', function() {
 gulp.task('scripts', function() {
     gulp.src('./js/*.js')
         .pipe(concat('all.js'))
-        .pipe(gulp.dest('./build'))
+        // .pipe(gulp.dest('./dist')) // distribution
         .pipe(rename('all.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./build'));
+        .pipe(gulp.dest('./dist')); // distribution
 });
 
 // 默认任务
