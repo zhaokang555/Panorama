@@ -7,6 +7,8 @@
 var gulp = require('gulp'); 
 
 // 引入组件
+// 保证在当前项目目录下曾经运行过：
+// npm install gulp-jshint gulp-concat gulp-uglify gulp-rename --save-dev
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
