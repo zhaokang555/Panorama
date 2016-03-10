@@ -5,7 +5,7 @@ var scene = null;
 var camera = null;
 var renderer = null;
 var id = null;
-//var stat = null; //stat是测试时用来统计帧数的工具
+// var stat = null; //stat是测试时用来统计帧数的工具
 var speed = 0.005;
 //var speedSpan = document.getElementById('speed');
 
