@@ -1,12 +1,8 @@
 
-/*@media screen and (max-device-width: 800px) {*/
+@media all and (max-width: 435px) {
+    
+    button {
+        width: 100%;
+    }
 
-/*}*/
-
-/*@media screen and (min-width: 801px) {*/
-
-/*}*/
-
-button {
-    width: 196px;
 }
