@@ -10,11 +10,14 @@
 <body>
     <div id="wrapper">
         <canvas id="mainCanvas" width="800px" height="600px"></canvas>
-        <br>
+        
+        <div id="buttons">
         <button id="stop" class="btn btn-primary btn-lg" type="button">停止</button>
         <button id="begin" class="btn btn-primary btn-lg" type="button">继续</button>
         <button id="speedSlower" class="btn btn-primary btn-lg" type="button">减速</button>
         <button id="speedFaster" class="btn btn-primary btn-lg" type="button">加速</button>
+        </div>
+
         <p>旋转速度：<span id = "speed"></span>弧度/帧</p>
     </div>
     <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>

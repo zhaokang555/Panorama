@@ -10,6 +10,13 @@
         width: 100%;
     }
 
-
+    #buttons {
+    	margin: 0 auto;
+    	width: 95%;
+    	display: -webkit-flex;
+    	flex-direction: column;
+	    justify-content: center; // 子元素水平居中
+	    align-items: center; // 子元素垂直居中
+    }
 
 }
